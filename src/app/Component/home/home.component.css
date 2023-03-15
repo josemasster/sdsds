@@ -1,0 +1,18 @@
+
+.container{
+    width: 72%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 50px;
+
+}
+
+
+.col-12{
+    margin-top: 350px;
+    text-align: center;
+
+}
+.img-fluid{
+    width: 100%;
+}

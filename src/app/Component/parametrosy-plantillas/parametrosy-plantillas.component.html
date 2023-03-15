@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+        <app-nav-map *ngFor="let infor of directorio1" [directorio]="infor"></app-nav-map>
+    </div>
+    <div class="col-2">
+        <app-user></app-user>
+    </div>
+</div>
+  <div class="row" id="titulo" *ngIf="general">
+    <h2 id="texto">PARÁMETROS Y PLANTILLAS</h2>
+  </div>
+  <div class="row" *ngIf="general">
+      <div class="col-9" *ngIf="general">
+      <form action="" class="form">
+        <div class="input-group" >
+            <select class="form-select" #opcion>
+              <option *ngFor="let pais of paises"> {{pais.nombre}}</option>
+            </select>
+            <button class="btn btn-outline-secondary" type="button" (click)="accion(opcion.value)">Buscar</button>
+        </div>
+        </form>
+      </div>
+      <div class="col-9" id="tabla" *ngIf="variableColombia">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col" class="fila">No</th>
+                <th scope="col" class="fila">FECHA Y HORA</th>
+                <th scope="col" class="fila">NOMBRE PLANTILLA</th>
+                <th scope="col" class="filax">
+                  <div class="input-group mb-3" id="Buscar">
+                    <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1" >
+                    <span class="input-group-text" id="basic-addon1" id="icon"><i class="bi bi-search"></i></span>
+                  </div>
+                </th>
+                <th scope="col" class="filax"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let plantilla of plantillas_colombia; let i=index">
+                <th scope="row">{{plantilla.index+1}}</th>
+                <td>{{plantilla.fehcha}}</td>
+                <td>{{plantilla.nombre}}</td>
+                 <td class="culumnas"><button class="bton-form" (click)="editplantilla()"><i class="bi bi-pencil-square"></i></button></td>
+                <td class="columnas"><button class="bton-form" (click)="deleteplantillas(plantilla.index)"><i class="bi bi-trash3"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <div class="col-9" id="tabla" *ngIf="variableParaguay">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col" class="fila">No</th>
+                <th scope="col" class="fila">FECHA Y HORA</th>
+                <th scope="col" class="fila">NOMBRE PLANTILLA</th>
+                <th scope="col" class="filax">
+                  <div class="input-group mb-3" id="Buscar">
+                    <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1" >
+                    <span class="input-group-text" id="basic-addon1" id="icon"><i class="bi bi-search"></i></span>
+                  </div>
+                </th>
+                <th scope="col" class="filax"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let plantilla of plantillas_paraguay; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{plantilla.fehcha}}</td>
+                <td>{{plantilla.nombre}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <div class="col-9" id="tabla" *ngIf="variablePeru">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col" class="fila">No</th>
+                <th scope="col" class="fila">FECHA Y HORA</th>
+                <th scope="col" class="fila">NOMBRE PLANTILLA</th>
+                <th scope="col" class="filax">
+                  <div class="input-group mb-3" id="Buscar">
+                    <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1" >
+                    <span class="input-group-text" id="basic-addon1" id="icon"><i class="bi bi-search"></i></span>
+                  </div>
+                </th>
+                <th scope="col" class="filax"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor="let plantilla of plantillas_peru; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{plantilla.fehcha}}</td>
+                <td>{{plantilla.nombre}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <app-edit-plantillas *ngIf="edit"></app-edit-plantillas>
+    </div>
+

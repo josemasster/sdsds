@@ -1,0 +1,122 @@
+
+.container{
+    width: 72%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 50px;
+ 
+
+}
+
+
+
+.col-9{
+    margin-top: 30px;
+    margin-left: 3%;
+    box-sizing: border-box;
+    height: 70px;
+    background: #85B126;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+
+
+.col-2{
+    
+
+}
+#col1{
+    margin-left: 1,9%;
+
+
+}
+.col-3{
+    width: 15%;
+    margin-left: 2%;
+    text-align: center;
+
+}
+
+#input{
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.Texto-Cont{
+    border: none;
+    color:white;
+    font-size: 30px;
+    background-color: #85B126;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.bi-shield-check{
+    color: white;
+    font-size: 32px;
+    margin-left: 12px;
+}
+
+.bi-lightbulb-fill{
+    color: white;
+    font-size: 32px;
+    margin-left: 12px;
+
+}
+.bi-gear-fill{
+    color: white;
+    font-size: 32px;
+    margin-left: 12px;
+
+}
+
+.bi-file-excel{
+    color: white;
+    font-size: 32px;
+    margin-left: 12px;
+
+}
+
+
+
+.icono{
+    width: 42px;
+    margin-bottom: 6px;
+    margin-top: -4px;
+    margin-left: 12px;
+}
+.texto{
+font-weight:bold;
+}
+#col1{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.bi-calendar4{
+    margin-right:2px;
+}
+.bi-flag{
+    margin-right:2px;
+}
+.bi-arrow-down{
+    margin-right:2px;
+}
+.bi-arrow-up {
+    margin-right: 2px;
+}
+#cargar{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 12px;
+    width: 150px;
+}
+#cargar-col{
+margin-left: 20px;
+}

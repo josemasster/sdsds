@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+        <app-nav-map *ngFor="let infor of directorio1" [directorio]="infor"></app-nav-map>
+    </div>
+    <div class="col-2">
+        <app-user></app-user>
+    </div>
+</div>
+    <div class="row" id="titulo">
+            <h2 id="texto">AUDITORÍA</h2>
+    </div>
+    <div class="row" id="contenido">
+      <div class="col-9" id="tabla">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col" class="fila">No</th>
+                <th scope="col" class="fila">NOMBRE DE USUARIO</th>
+                <th scope="col" class="fila">ACCION REALIZADA</th>
+                <th scope="col" class="fila">PERFIL</th>
+                <th scope="col" class="fila">FECHA Y HORA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let usuario of prueba; let i=index">
+                <th scope="row" >{{i+1}}</th>
+                <td>{{usuario.nombre}}</td>
+                <td>{{usuario.accion}}</td>
+                <td>{{usuario.perfil}}</td>
+                <td>{{usuario.fecha}}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,44 @@
+<div  class="container-fluid">
+    <div class="row">
+       <div class="col-12" id="figura"></div>
+    </div>
+    <div class="row" id="filaimagen">
+        <div class="col-12" >
+            <img src="../../assets/Home.png" class="img"> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h1 id="titulo"> INICIO DE SESION</h1>
+        </div>
+    </div>
+  
+       <div class="row">
+          <div class="col-12">
+             <img src="../../assets/User.png" class="logo">
+          </div>
+       </div>
+        <div class="row">
+            <form [formGroup]="myForm" (ngSubmit)="submitFormulario()" id="form" >
+                <div class="col-12">
+                    <div class="input-group mb-3" id="input">
+                        <span class="input-group-text" id="basic-addon1" ><i class="bi bi-person-fill"></i></span>
+                        <input formControlName="usuario" type="email" class="form-control" placeholder="username" >
+                    </div>
+                    <div class="input-group" id="input">
+                        <span class="input-group-text" id="basic-addon1" ><i class="bi bi-lock-fill"></i></span>
+                        <input formControlName="password" type="password" class="form-control" placeholder="password" >
+                    </div>
+                </div>
+              <div class="row">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary"  [routerLink]="[ruta]">Iniciar</button>
+                </div>
+            </div>
+           </form>
+        </div>
+        <div class="row" id="rowfinal">
+          <div class="col-12" id="figura"></div>
+      </div>
+</div>
+  

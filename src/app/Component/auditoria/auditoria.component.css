@@ -1,0 +1,40 @@
+
+.container{
+    width: 72%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 50px;
+
+}
+#texto{
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+#titulo{
+    margin-top: 3%;
+    margin-left: 3%;
+}
+#contenido{
+    margin-top: 30px;
+    margin-left: 8%;
+}
+
+.fila{
+    background-color: #85B126;
+    color: white;
+    border-color: white;
+    border: 3px;
+    position: sticky;
+    top:0;
+}
+#tabla{
+    overflow-y: scroll;
+    height: 700px;
+    margin-top: 20px;
+}
+

@@ -1,0 +1,87 @@
+.container{
+    width: 72%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 50px;
+
+
+
+
+}
+#titulo{
+    margin-top: 3%;
+}
+
+#texto{
+    margin-left: 3%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+
+.col-9{
+    margin-top: 30px;
+
+}
+.form{
+    width: 100%;
+    float: left;
+    margin-left: 6%;
+}
+
+
+
+
+
+
+
+
+.btn-outline-secondary{
+    color: #fff;
+    background-color:#414990;
+}
+#tabla{
+    margin-left: 8%;
+    margin-top: 10%;
+
+}
+.fila{
+    background-color: #85B126;
+    color: white;
+    border-color: white;
+    border: 3px;
+}
+.bi-pencil-square{
+       font-size: 24px;
+       margin-left: 100px;
+    
+}
+.bi-trash3{
+        font-size: 24px;
+}
+#Buscar{
+        height: 18px;
+        border: none;
+        width: 150px;
+        margin-left: 40px;
+    
+    }
+#icon{
+    border: none;
+}
+.fila{
+    height: 12px;
+    width: 300px;
+    padding: 13px;
+}
+.columnas{
+        width: 100px;
+}
+.bton-form{
+    background-color: white;
+    border: none;
+}

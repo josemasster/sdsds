@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+        <app-nav-map *ngFor="let infor of directorio1" [directorio]="infor"></app-nav-map>
+    </div>
+    <div class="col-2">
+        <app-user></app-user>
+    </div>
+  </div>
+  <div class="row" id="titulo" *ngIf="Cargue">
+    <h2 id="texto">CARGUE DE ARCHIVOS</h2>
+  </div>
+  <form *ngIf="Cargue">
+    <div class="row">
+      <div class="col-5">
+        <label for="pais" class="" id="texto1">Pais:</label>
+          <select class="form-select" id="entrada">
+            <option value="1">Colombia</option>
+            <option value="2">Paraguay</option>
+            <option value="3">Peru</option>
+          </select>    
+      </div>
+      <div class="col-5">
+        <label for="archivo" class="" id="texto1" >Adjuntar:</label>
+        <input  class="form-control" type="file" id="entrada" #entrada>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3" id="mover">
+
+          <button class="btn">Cargar</button>
+
+      </div>
+      <div class="col-3" *ngIf="cargo=='Riesgos'">
+
+          <button class="btn" (click)="accion(entrada.value)" >Previsualizar</button>
+
+      </div>
+    </div>
+  </form>
+  <app-carga-plantilla *ngIf="CargarPlantilla"></app-carga-plantilla>
+</div>
+

@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <app-nav-map *ngFor="let infor of directorio1" [directorio]="infor"></app-nav-map>
+        </div>
+        <div class="col-2">
+            <app-user></app-user>
+        </div>
+    </div>
+    <div class="row" id="Titulo" >
+        <div class="col-9">
+            <span><i class="bi bi-shield-check"></i></span>
+            <button class="Texto-Cont">Homologacion</button>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-9" id="Titulo">
+            <img src="../../../assets/cheque (1).png" class="icono">
+            <button class="Texto-Cont" disabled="true">Generar Comprobante</button> 
+        </div>
+    </div>
+    <br><br>
+    <div class="row" id="col1" >
+        <div class="col-3" >
+            <span class="texto"> Formato:</span>
+        </div>
+        <div class="col-3">
+            <i class="bi bi-calendar4"></i>
+            <span class="texto">Fecha</span>
+        </div>
+        <div class="col-3">
+            <i class="bi bi-flag"></i>
+            <span class="texto">Pais</span>
+        </div>
+        <div class="col-3">
+            <i class="bi bi-arrow-down"></i>
+            <span class="texto">Generar</span>
+        </div>
+
+    </div>
+    <div class="row" id="col1" >
+        <div class="col-3">
+            <span class="texto"> FullNIIF:</span>
+        </div>
+        <div class="col-3">
+            <input type="date" id="input">
+        </div>
+        <div class="col-3">
+            <select id="input">
+                <option value="2">Paraguay</option>
+                <option value="3">Peru</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <input type="submit" value="Generar Comprobante" id="input">
+        </div>
+    </div>
+    <div class="row"  id="col1" >
+        <div class="col-3">
+            <span class="texto"> CollNIIF:</span>
+        </div>
+        <div class="col-3">
+            <input type="date" id="input">
+        </div>
+        <div class="col-3">
+            <select id="input">
+                <option value="2">Paraguay</option>
+                <option value="3">Peru</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <input type="submit" value="Generar Comprobante" id="input">
+        </div>
+    </div>
+    <div class="row" id="Titulo">
+        <div class="col-9">
+            <span><i class="bi bi-file-excel"></i></span>
+            <button class="Texto-Cont">Generación Fomato 239</button>
+        </div>
+    </div>
+    <div class="row" id="Titulo">
+        <div class="col-9">
+            <span><i class="bi bi-gear-fill"></i></span>
+            <button class="Texto-Cont">Ejecicon panama</button>
+        </div>
+    </div>
+</div>
