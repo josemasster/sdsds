@@ -1,5 +1,6 @@
 
 import { HttpClient,HttpHeaders} from '@angular/common/http';
+import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import {  throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
@@ -29,17 +30,21 @@ export class AutentificationService{
 
 
  ingresarAplicativo(obj:any):any{
+  console.log(obj.usuario, obj.password)
+   const infor ={
+    email:obj.usuario,
+    password:obj.password
 
+  }
   return this.http
   .post <Tokenapi>(
-    this. url + '/login',
-    JSON.stringify({correo:obj.correo,password:obj.password}),
+    'http://localhost:3002/login',
+    infor,
     this.httpOptions
   )
-  .pipe(retry(1), catchError(this.errorHandl)).subscribe(toKen=>localStorage.setItem('token',toKen.token));
-
-
-  
+  .pipe(retry(1), catchError(this.errorHandl)).subscribe(token=>{
+    console.log(token)
+    localStorage.setItem('token',token.token)});
 }
 //funcion
 

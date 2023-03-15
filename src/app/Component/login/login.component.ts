@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
     }
     
     if(this.loginPrd.ingresarAplicativo(this.myForm.value)== false){
+      console.log(this.loginPrd.ingresarAplicativo)
       alert("Usuario o contraseña invalido")
       this.ruta ='/login'
     }
