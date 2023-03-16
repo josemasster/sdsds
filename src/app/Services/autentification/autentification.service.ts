@@ -2,6 +2,7 @@
 import { HttpClient,HttpHeaders} from '@angular/common/http';
 import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import {  throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 
@@ -17,8 +18,11 @@ interface Tokenapi{
 
 export class AutentificationService{
   ingresar:boolean
+
 //constructor 
-  constructor (private http:HttpClient) {}
+  constructor (private http:HttpClient,private router:Router) {
+    
+  }
 
   url: 'http://localhost:3002'
   httpOptions = {
@@ -44,7 +48,9 @@ export class AutentificationService{
   )
   .pipe(retry(1), catchError(this.errorHandl)).subscribe(token=>{
     console.log(token)
-    localStorage.setItem('token',token.token)});
+    localStorage.setItem('token',token.token),
+    console.log(localStorage.getItem("token")),
+    this.router.navigate(['/nav'])});
 }
 //funcion
 
