@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AutentificationService} from '../../Services/autentification/autentification.service'
 
 @Component({
   selector: 'app-user',
@@ -9,6 +10,12 @@ export class UserComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+  }
+
+  eliminartoken(){
+    localStorage.removeItem('token')
+         
   }
 
 }
